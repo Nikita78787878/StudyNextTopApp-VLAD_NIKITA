@@ -1,6 +1,6 @@
 'use client';
 
-import {HhData, Htag, Tag} from '../../components';
+import {Advantages, HhData, Htag, P, Tag} from '../../components';
 import {TopPageComponentProps} from './TopPageComponent.props';
 import styles from './TopPageComponent.module.css';
 import {JSX} from 'react';
@@ -25,7 +25,7 @@ export const TopPageComponent = ({page, products, firstCategory}: TopPageCompone
                  <Tag color={'red'} size={'m'}>hh.ru</Tag>
             </div>
 
-            {firstCategory == TopLevelCategory.Courses && <HhData
+            {firstCategory == TopLevelCategory.Courses && page.hh && <HhData
                 _id={page._id}
                 count={page.hh!.count}
                 juniorSalary={page.hh!.juniorSalary}
@@ -33,6 +33,13 @@ export const TopPageComponent = ({page, products, firstCategory}: TopPageCompone
                 seniorSalary={page.hh!.seniorSalary}
                 updatedAt={page.updatedAt}
             />}
+            {page.advantages && page.advantages.length > 0 && <>
+                <Htag tag='h2'>Преимущества</Htag>
+                <Advantages advantages={page.advantages}/>
+            </>}
+            {page.seoText && <P>{page.seoText}</P>}
+            <Htag tag='h2'>Получаемые навыки</Htag>
+            {page.tags.map(t=> <Tag key={t} color='primary'>{t}</Tag>)}
         </div>
     );
 };

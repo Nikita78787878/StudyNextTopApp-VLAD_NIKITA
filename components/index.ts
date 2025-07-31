@@ -9,3 +9,4 @@ export * from './Main/Sidebar/Sidebar';
 export * from './TopPageComponent/TopPageComponent';
 export * from './Card/Card';
 export * from './HhData/HhData';
+export * from './Advantages/Advantages';

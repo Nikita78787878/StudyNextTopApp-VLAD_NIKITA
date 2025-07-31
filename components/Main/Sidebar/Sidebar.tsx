@@ -1,7 +1,7 @@
 import {SidebarProps} from "./Sidebar.props";
 import {JSX} from "react";
 import Menu from "@/components/Menu/Menu";
-import Logo from "../logo.svg";
+import Logo from "./logo.svg";
 import cn from "classnames";
 import styles from "./Sidebar.module.css";
 

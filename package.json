@@ -31,6 +31,6 @@
     "stylelint-config-standard": "^38.0.0",
     "stylelint-order": "^7.0.0",
     "typescript": "^5",
-    "webpack": "^5.99.9"
+    "webpack": "^5.101.0"
   }
 }
