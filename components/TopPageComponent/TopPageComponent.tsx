@@ -1,10 +1,11 @@
 'use client';
 
-import {Advantages, HhData, Htag, P, Tag} from '../../components';
+import {Advantages, HhData, Htag, Sort, Tag} from '../../components';
 import {TopPageComponentProps} from './TopPageComponent.props';
 import styles from './TopPageComponent.module.css';
 import {JSX} from 'react';
 import {TopLevelCategory} from "@/interfaces/page.interface";
+import {SortEnum} from "@/components/Sort/Sort.props";
 
 export const TopPageComponent = ({page, products, firstCategory}: TopPageComponentProps): JSX.Element => {
     return (
@@ -13,7 +14,7 @@ export const TopPageComponent = ({page, products, firstCategory}: TopPageCompone
             <div className={styles.title}>
                 <Htag tag={'h1'}>{page.title}</Htag>
                 {products && <Tag color={'grey'} size={'s'}>{products.length}</Tag>}
-                <span>Сортировка</span>
+                <Sort sort={SortEnum.Rating} setSort={() => {}}/>
             </div>
 
             <div>
