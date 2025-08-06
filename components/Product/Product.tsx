@@ -3,12 +3,21 @@ import {JSX} from "react";
 import {Button, Card, Divider, Rating, Tag} from "@/components";
 import styles from './Product.module.css'
 import {declOfNum, priceRu} from "@/helpers/helpers";
+import Image from "next/image";
 
 
 export const Product = ({product, className, ...props}: ProductProps): JSX.Element => {
     return(
         <Card className={styles.product}>
-            <div className={styles.logo}> <img src={product.image} alt={product.title}/></div>
+            <div className={styles.logo}>
+                <Image
+                    src={product.image}
+                    alt={product.title}
+                    width={70}
+                    height={70}
+                    quality="100"
+                />
+                </div>
             <div className={styles.title}>{product.title}</div>
             <div className={styles.price}>
                 {priceRu(product.price)}
