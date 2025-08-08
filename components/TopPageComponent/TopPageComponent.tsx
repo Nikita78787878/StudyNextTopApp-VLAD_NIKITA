@@ -1,6 +1,6 @@
 'use client';
 
-import {Advantages, HhData, Htag, Sort, Tag} from '../../components';
+import {Advantages, HhData, Htag, Product, Sort, Tag} from '../../components';
 import {TopPageComponentProps} from './TopPageComponent.props';
 import styles from './TopPageComponent.module.css';
 import {JSX, useReducer} from 'react';
@@ -25,7 +25,7 @@ export const TopPageComponent = ({page, products, firstCategory}: TopPageCompone
             </div>
 
             <div>
-                {products && sortedProducts.map(p => (<div key={p._id}>{p.title}</div>))}
+                {products && sortedProducts.map(p => (<Product key={p._id} product={p}/>))}
             </div>
 
             <div className={styles.hhTitle}>

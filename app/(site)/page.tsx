@@ -1,6 +1,7 @@
 import styles from './page.module.css';
 import {Metadata} from "next";
 import {Menu} from "@/app/(site)/components/menu";
+import {Input, Textarea} from "@/components";
 
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -25,6 +26,8 @@ export default async function Home() {
     return (
         <main className={styles.main}>
             Главная страница
+            <Input placeholder="тест" />
+            <Textarea placeholder="тест area"/>
             <Menu/>
         </main>
     );
