@@ -4,6 +4,7 @@ import {Button, Card, Divider, Rating, Tag} from "@/components";
 import styles from './Product.module.css'
 import {declOfNum, priceRu} from "@/helpers/helpers";
 import Image from "next/image";
+import cn from "classnames";
 
 
 export const Product = ({product, className, ...props}: ProductProps): JSX.Element => {
@@ -52,7 +53,7 @@ export const Product = ({product, className, ...props}: ProductProps): JSX.Eleme
                     <div>{product.disadvantages}</div>
                 </div>}
             </div>
-            <Divider className={styles.hr} />
+            <Divider className={cn(styles.hr, styles.hr2)} />
 
             <div className={styles.actions}>
                 <Button appearance={'primary'}>Узнать подробнее</Button>
