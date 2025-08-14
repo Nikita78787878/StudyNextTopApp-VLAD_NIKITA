@@ -26,6 +26,7 @@ body {
   --dark: #3B434E;
   --font-family: "Noto Sans KR", sans-serif;
   --gray-light: #EBEBEB;
+  --red-light: #fea291;
 }
 
 @media (prefers-color-scheme: dark) {
