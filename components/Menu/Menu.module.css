@@ -37,17 +37,7 @@
     border-left: 1px solid #DFDFDF;
 }
 .secondLevelBlock{
-    display: none;
-
-}
-.secondLevelBlockOpen {
-    display: block;
-
-}
-
-.secondLevelBlockOpen:last-child {
-    margin-bottom: 20px;
-
+    overflow: hidden; /*важно чтобы ссылка не вылазила не видимая для глаза*/
 }
 
 .thirdLevel{
