@@ -26,8 +26,8 @@ export default async function RootLayout({
         <body>
         <AppContextProvider menu={menu} firstCategory={firstCategory}>
             <div className={styles.wrapper}>
-                <Header className={styles.header}/>
-                <Sidebar className={styles.sidebar}/>
+                <Header menu={menu} firstCategory={firstCategory} className={styles.header}/>
+                <Sidebar menu={menu} firstCategory={firstCategory} className={styles.sidebar}/>
                 <div className={styles.body}>
                     {children}
                 </div>
