@@ -1,6 +1,6 @@
 // import type {Metadata} from "next";
 import "./globals.css";
-import {Footer, Header, Sidebar} from "@/components";
+import {Footer, Header, Sidebar, Up} from "@/components";
 import styles from './page.module.css';
 import {getMenu} from "@/api/menu";
 import {AppContextProvider} from "@/context/app.context";
@@ -26,12 +26,13 @@ export default async function RootLayout({
         <body>
         <AppContextProvider menu={menu} firstCategory={firstCategory}>
             <div className={styles.wrapper}>
-                <Header className={styles.header}/>
-                <Sidebar className={styles.sidebar}/>
+                <Header menu={menu} firstCategory={firstCategory} className={styles.header}/>
+                <Sidebar menu={menu} firstCategory={firstCategory} className={styles.sidebar}/>
                 <div className={styles.body}>
                     {children}
                 </div>
                 <Footer className={styles.footer}/>
+                <Up/>
             </div>
         </AppContextProvider>
         </body>

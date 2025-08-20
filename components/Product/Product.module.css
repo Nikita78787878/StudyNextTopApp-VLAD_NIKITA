@@ -89,6 +89,11 @@
     margin-left: 20px;
 }
 
+.reviews{
+    overflow: hidden;
+    padding: 30px;
+}
+
 
 .month{
     font-size: 14px;
