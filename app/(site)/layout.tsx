@@ -4,6 +4,7 @@ import {Footer, Header, Sidebar, Up} from "@/components";
 import styles from './page.module.css';
 import {getMenu} from "@/api/menu";
 import {AppContextProvider} from "@/context/app.context";
+// import Script from "next/script";
 
 // export const metadata: Metadata = {
 //     title: "Create Next App",
@@ -21,8 +22,11 @@ export default async function RootLayout({
 
     return (
         <html lang="ru">
+        {/*ЭТО СКРИПТ ДЛЯ ЯНДЕКС МЕТРИКИ ИЛИ КАКОГО ИСПОЛНЯЕМОГ ФАЙЛА*/}
+        {/*<head>*/}
+        {/*    <Script src='' strategy='worker'/>*/}
+        {/*<head/>*/}
 
-        <head/>
         <body>
         <AppContextProvider menu={menu} firstCategory={firstCategory}>
             <div className={styles.wrapper}>
