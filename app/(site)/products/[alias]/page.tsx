@@ -5,6 +5,7 @@ import {getPage, getProduct} from '@/api/page';
 import {getMenu} from '@/api/menu';
 import {ProductModel} from "@/interfaces/product.interface";
 import {TopPageComponent} from "@/components";
+import {Metadata} from "next";
 
 interface AliasParams {
     alias: string
@@ -38,21 +39,22 @@ export default async function PageProducts({params}: Props) {
 }
 
 // Генерация метаданных
-// export async function generateMetadata(
-// 	{ params }: Props,
-// 	// parent: ResolvingMetadata
-// ): Promise<Metadata | null> {
-// 	const { alias } = await params;
-//
-// 		const page = await cachedGetPage(alias);
-// 		if (!page) {
-// 			notFound(); // вызывает 404 и прекращает рендер segment
-// 		}
-// 		return {
-// 			title: page.metaTitle ?? undefined,
-// 		};
-//
-// }
+export async function generateMetadata(
+    { params }: Props,
+): Promise<Metadata | null> {
+    const { alias } = await params;
+
+    const page = await cachedGetPage(alias);
+    if (!page) {
+        notFound(); // вызывает 404 и прекращает рендер segment
+    }
+    return {
+        title: page.metaTitle ?? undefined,
+        description: page.metaDescription ?? undefined, // если используете описание
+    };
+
+}
+
 
 
 
