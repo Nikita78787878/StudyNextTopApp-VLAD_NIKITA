@@ -13,9 +13,11 @@
     "date-fns": "^4.1.0",
     "framer-motion": "^12.23.12",
     "next": "15.3.3",
+    "next-yandex-metrica": "^1.2.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-hook-form": "^7.62.0"
+    "react-hook-form": "^7.62.0",
+    "react-yandex-metrika": "^2.6.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",

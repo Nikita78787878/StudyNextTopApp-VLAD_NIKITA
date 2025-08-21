@@ -4,6 +4,7 @@ import {Footer, Header, Sidebar, Up} from "@/components";
 import styles from './page.module.css';
 import {getMenu} from "@/api/menu";
 import {AppContextProvider} from "@/context/app.context";
+// import {YandexMetricaProvider} from "next-yandex-metrica";
 // import Script from "next/script";
 
 // export const metadata: Metadata = {
@@ -21,7 +22,14 @@ export default async function RootLayout({
     const menu = await getMenu(firstCategory);
 
     return (
+
         <html lang="ru">
+
+        {/*<YandexMetricaProvider*/}
+        {/*    tagID={12345678}*/}
+        {/*    initParameters={{ clickmap: true, trackLinks: true, accurateTrackBounce: true }}*/}
+        {/*    router="app"*/}
+        {/*>*/}
         {/*ЭТО СКРИПТ ДЛЯ ЯНДЕКС МЕТРИКИ ИЛИ КАКОГО ИСПОЛНЯЕМОГ ФАЙЛА*/}
         {/*<head>*/}
         {/*    <Script src='' strategy='worker'/>*/}
@@ -40,6 +48,9 @@ export default async function RootLayout({
             </div>
         </AppContextProvider>
         </body>
+
+        {/*</YandexMetricaProvider>*/}
+
         </html>
     );
 }
